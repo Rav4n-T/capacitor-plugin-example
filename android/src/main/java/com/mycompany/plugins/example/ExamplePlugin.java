@@ -19,4 +19,12 @@ public class ExamplePlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void openMap(PluginCall call){
+        Double latitude = call.getDouble("latitude");
+        Double longitude = call.getDouble("longitude");
+
+        call.resolve();
+    }
 }
